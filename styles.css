@@ -1,0 +1,531 @@
+/* Estilos generales */
+body, html {
+    height: 100%;
+    font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Encabezado */
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-menu {
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 1px solid #F786B3;
+    background: #FFFCFD;
+    color: #E4347A;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-menu:hover {
+    background-color: #E4347A;
+    color: white;
+}
+
+/* Secciones */
+.section {
+    min-height: 100vh;
+    padding: 40px 20px 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease;
+
+}
+
+.section #sobre-mi {
+    display: flex;
+padding: 22.571px 45.141px;
+justify-content: center;
+align-items: center;
+gap: 54.169px;
+align-self: stretch;
+}
+
+
+.main-container {
+    display: flex;
+    padding: 22.571px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27.085px;
+    flex: 1 0 0;
+
+}
+
+.hola {
+    color: var(--Primario-200, #E4347A);
+    text-align: center;
+   
+    font-family: "Nunito Sans";
+    font-size: 18.056px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.texto-2 {
+    display: flex;
+    width: 849.781px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18.056px;
+
+}
+
+/* Pie de página */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-menu {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 80px 10px 40px 10px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#sobre-mi img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.texto-2 {
+    display: flex;
+width: 849.781px;
+flex-direction: column;
+align-items: flex-start;
+gap: 18.056px;
+}
+
+.experiencia .box {
+    background-color: white;
+    color: deepPink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    transform: translateX(200%);
+    transition: transform 0.4s ease-in;
+}
+
+.experiencia .box:nth-of-type(even) {
+    transform: translateX(-200%);
+}
+
+.experiencia .box.show {
+    transform: translateX(0);
+}
+
+
+
+
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contacto form input, .contacto form textarea {
+    padding: 10px;
+    border: 1px solid #E4347A;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contacto form button {
+    padding: 12px 20px;
+    background-color: #E4347A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto form button:hover {
+    background-color: #D0205B;
+}
+
+
+
+
+
+.experience-content {
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+    
+    gap: 24px;
+    display: grid;
+}
+
+
+.card-experiencia {
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+    gap: 16px;
+    border-radius: 22.571px;
+    border: 1.129px solid rgba(216, 216, 216, 0.5);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+    position: relative; /* Asegúrate de que las tarjetas tengan posición relativa */
+    backdrop-filter: blur(20px);
+    box-shadow: 96px 69px 33px 0px rgba(228, 52, 122, 0.00), 61px 44px 30px 0px rgba(228, 52, 122, 0.01);
+}
+
+.card-experiencia:first-of-type {
+    position: sticky;
+    top: 160px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -10; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia2 {
+    position: sticky;
+    top: 168px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -9; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia3 {
+    position: sticky;
+    top: 176px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -8; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia4 {
+    position: sticky;
+    top: 184px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -7; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia5 {
+    position: sticky;
+    top: 192px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -6; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia6 {
+    position: sticky;
+    top: 200px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -5; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia7 {
+    position: sticky;
+    top: 208px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -4; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia8 {
+    position: sticky;
+    top: 216px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -3; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia9 {
+    position: sticky;
+    top: 224px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -2; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+#experiencia10 {
+    position: sticky;
+    top: 232px; /* La tarjeta se mantendrá fija en la parte superior */
+    z-index: -1; /* Asegura que la tarjeta fija esté encima de las demás */
+}
+
+
+
+.contenido-experiencia {
+    display: flex;
+    width: 726.771px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+
+
+.contenido-experiencia span {
+    color: var(--Neutral-300, #413B3B);
+    font-family: "Nunito Sans";
+    font-size: 14.671px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.titulo-experiencia {
+    display: flex;
+    align-items: flex-start;
+    gap: 4.514px;
+}
+
+.titulo-experiencia h3 {
+    color: var(--Neutral-300, #413B3B);
+    font-family: Lora;
+    font-size: 23.699px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0%;
+}
+
+.fecha-experiencia {
+    color: var(--Neutral-300, #413B3B);
+    font-family: "Nunito Sans";
+    font-size: 9.028px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/* portfolio */
+
+/* portfolio */
+
+.gallery-wrap {
+    display: flex;
+height: 521.237px;
+    
+    padding: 40px 20px 40px 20px;
+    
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.section .item {
+    display: flex;
+width: 609.807px;
+padding: 20.361px;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+gap: 24.433px;
+align-self: stretch;
+border-radius: 20.361px;
+border: 1.018px solid var(--Neutral-100, #BEBABA);
+background: var(--Neutral-0, #FCFAFA);
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.144px;
+    flex: 1 0 0;
+    align-self: stretch;
+
+}
+
+.tag {
+    display: flex;
+    height: 32px;
+    padding: 8px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+border-radius: 24px;
+border: 1px solid #BEBABA;
+}
+
+
+
+/* Estudios */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #E4347A;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height 0.4s ease-in;
+    opacity: 0.5; /* Hacemos la línea más sutil */
+}
+
+.timeline-item {
+    display: flex;
+    width: 424px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 20px;
+    border: 1px solid #BEBABA;
+    background: #FCFAFA;
+    opacity: 0; /* Empieza invisible */
+    transform: translateY(50px); /* Desplazado hacia abajo */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.timeline-item.visible {
+    opacity: 1; /* Se hace visible */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline .container.left {
+    left: 0;
+}
+
+.timeline .container.right {
+    left: 50%;
+}
+
+.timeline .container::before {
+    content: " ";
+    height: 20px; /* Aumentamos la altura para formar un punto */
+    width: 20px;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #E4347A;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline .container.right::before {
+    left: auto;
+    right: -10px;
+}
+
+.timeline .container .content {
+    padding: 20px 30px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones al aparecer */
+.timeline .container.left .content {
+    animation: fadeInLeft 1s ease-out;
+}
+
+.timeline .container.right .content {
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilos para cuando el item esté cerca del centro */
+@keyframes fadeInCenter {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* Efecto de aparición y desvanecimiento */
+.timeline-item {
+    opacity: 0.2;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
